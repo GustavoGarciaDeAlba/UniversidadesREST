@@ -19,6 +19,8 @@ import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -55,6 +57,7 @@ public class Pabellon implements Serializable{
 	private Direccion direccion;
 	
 	@OneToMany(mappedBy = "pabellon", fetch = FetchType.LAZY)
+	@JsonIgnoreProperties({"pabellon"})
 	private Set<Aula> aulas;
 	
 	public Pabellon(Integer id, Double metrosCuadrados, String nombre, Direccion direccion) {
