@@ -114,7 +114,6 @@ public class CarreraController {
 	 * @NotfoundException En caso de no encuentre ningun elemento en la base de datos
 	 * @author GGdAE - 07/16/2022
 	 */ 
-
 	@GetMapping("/carreras/dto")
 	public ResponseEntity<?> obtenerCarrerasDTO(){
 		List<Carrera> carreras = (List<Carrera>) carreraDao.buscarTodos();

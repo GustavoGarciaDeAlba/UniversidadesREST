@@ -65,9 +65,9 @@ public class AlumnoController {
 	}
 	
 	/**
-	 * 
+	 * Endpoint para obtener a un alumno por su ID
 	 * @param alumnoId
-	 * @return
+	 * @returnRetorna un objeto de tipo Alumno
 	 */
 	@GetMapping("/alumnoId/{alumnoId}")
 	public ResponseEntity<?> obtenerAlumnoPorId(@PathVariable Integer alumnoId){
@@ -79,10 +79,10 @@ public class AlumnoController {
 	}
 	
 	/**
-	 * 
+	 * Endpoint para actualizar a una Persona de tipo Alumno
 	 * @param alumnoId
 	 * @param alumno
-	 * @return
+	 * @return Retorna el objeto alumno actualizado
 	 */
 	@PutMapping("/upd/alumnoId/{alumnoId}")
 	public ResponseEntity<?> actualizarAlumno(@PathVariable Integer alumnoId, @RequestBody Persona alumno){

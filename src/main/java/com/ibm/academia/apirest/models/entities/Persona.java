@@ -31,8 +31,8 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Entity
-//@Table(name = "personas", schema = "universidad")
-@Table(name = "personas")
+@Table(name = "personas", schema = "universidad")
+//@Table(name = "personas")
 @Inheritance(strategy = InheritanceType.JOINED)
 @JsonTypeInfo(
 		use = JsonTypeInfo.Id.NAME,
